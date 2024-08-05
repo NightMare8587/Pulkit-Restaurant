@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/index.js"></script>
+</head>
+<body>
+    
+    <!-- NavBar Section-->
+    <section id="navbar">
+        <div class="navbar_container">
+            <img src="/images/restaurant_image.webp" alt="" width="90px" height="90px">
+
+            <div class="nav_items">
+                <ul id="navlist">
+                    <li id="navlist_item" onclick="scrollToSection('home')">Home</li>
+                    <li id="navlist_item" onclick="scrollToSection('about')">About Us</li>
+                    <li id="navlist_item" onclick="scrollToSection('menu')">Menu</li>
+                    <li id="navlist_item" onclick="scrollToSection('contact')">Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--Hero Section-->
+    <section id="home">
+        <div class="hero">
+            <h2>Welcome to <span id="res_name">Pulkit Restaurant</span></h2>
+            <p>The best in the country</p>
+            <button id="contact_btn" onclick="scrollToSection('contact')">
+                Contact for table booking
+            </button>
+        </div>
+    </section>
+
+    <!--About Us Section-->
+    <section id="about">
+        <div class="about_res">
+            <p id="about_p"><span id="pulkit_res">Pulkit Restaurant</span> which started in 1947 after independence is still on going and providing a great taste to indians and their apetite. This beloved establishment began as a modest eatery with a vision to serve authentic Indian cuisine to a growing nation. Over the years, it has evolved into a renowned institution, celebrated for its commitment to quality and tradition.</p>
+            <p id="about_p">Pulkit Restaurant is not just a place to dine; it is a destination where food and culture come together to create lasting memories. We invite you to experience the exceptional flavors and warm hospitality that have made us a cherished part of the Indian dining landscape for over 75 years.</p>
+
+            <img id="res_award_image" src="https://etimg.etb2bimg.com/photo/104213690.cms" alt="" width="600px" height="300px">
+        </div>
+    </section>
+
+    <!--Menu Section-->
+    <section id="menu">
+        <div class="menu_container" onclick="openReceipeWeb('Kadhai')">
+            <div class="menu_card">
+                <h4>Kadhai Paneer</h4>
+                <p id="menu_card_p">Rich paneer made receipe that will make you go muuuaah
+                </p>
+            </div>
+
+            <div class="menu_card" onclick="openReceipeWeb('Dal')">
+                <h4>Dal makhni</h4>
+                <p id="menu_card_p">Kalai daal with butter that will make you go to washroom immidieatly
+                </p>
+            </div>
+
+            <div class="menu_card" onclick="openReceipeWeb('Lacha')">
+                <h4>Lacha Paratha</h4>
+                <p id="menu_card_p">Bhot acha you need aari to cut and eat  
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact_conatiner">
+            <div class="address_contact">
+                <h3>Lala Nagar</h3>
+                <p id="address_p"> Near Bhandara nagar, Gunde waale gali</p>
+                <p id="address_p">PIN: 123698</p>
+            </div>
+
+            <div class="contact_form">
+                <input type="text" id="name_field" placeholder="Enter your name">
+                <input type="email" id="email_field" placeholder="Enter your email">
+                <input type="number" id="number_field" placeholder="Enter your contact number">
+                <input type="text" id="message_field" placeholder="Enter your message with reservation time">
+                <button id="submit_form" onclick="sendMessageAndNotify()"> Send Message</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
